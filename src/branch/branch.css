@@ -6,8 +6,7 @@ span {
   left: 0;
   line-height: 1.5;
   font-size: 1rem;
-  /* color: #495057; */
-  /* color: #390969; */
+  color: #495057; 
   transition: 0.2s;
   transition-timing-function: ease;
   transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
@@ -18,9 +17,7 @@ input:not(:placeholder-shown) + span {
   opacity: 1;
   transform: scale(0.75) translateY(-80%) translateX(-18px);
   background-color: white;
-  /* color: #495057; */
-  /* color: #390969; */
-
+   color: #495057; 
   padding: 0.175rem 0.5rem;
 }
 textarea:focus + span,
@@ -28,8 +25,7 @@ textarea:not(:placeholder-shown) + span {
   opacity: 1;
   transform: scale(0.8) translateY(-80%) translateX(-1px);
   background-color: white;
-  /* color: #495057; */
-  /* color: #390969; */
+  color: #495057; 
   padding: 0.175rem 0.5rem;
 }
   .placeholder{
@@ -38,16 +34,12 @@ textarea:not(:placeholder-shown) + span {
     font-weight: 500;
     font-size: 22px;
     line-height: 26px;
-    /* identical to box height */
-    
-    
     color: #858585;
     
   }
   .form__main {
     padding: 0 !important;
     border-color: #96B6E7;
-    /* background-color: #96B6E7; */
     border: 100px;
 
   }
@@ -80,28 +72,24 @@ textarea:not(:placeholder-shown) + span {
 
   .branch__head{
     font-family: "Poppins", sans-serif;
-font-size: 26px;
-font-style: normal;
-font-weight: 500;
-line-height: 39px;
-letter-spacing: 0em;
-text-align: left;
-color: #000000;
-padding-left: 33px;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 39px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #000000;
+    padding-left: 33px;
 
   }
 
   .branch__title{
-    /* width: 516px;
-    height: 129px; */
     margin-top: 44px;
-background-color: rgba(236, 236, 236, 0.4);
-border-radius: 10px;
+    background-color: rgba(236, 236, 236, 0.4);
+    border-radius: 10px;
   }
 
   .branch__body{
-    /* width: 516px;
-    height: 254px; */
     margin-top: 44px;
     background-color: rgba(236, 236, 236, 0.4);
     border-radius: 10px;
@@ -109,36 +97,25 @@ border-radius: 10px;
   }
 
   .branch__mentionAuthor{
-    /* width: 516px;
-    height: 56.39px; */
     margin-top: 44px;
-    
     background-color: rgba(236, 236, 236, 0.4);
     border-radius: 10px;
   }
+
   .branch__selectState{
-    /* width: 516px;
-    height: 56.39px; */
-    margin-top: 44px;
-      
+    margin-top: 44px;  
     background-color: rgba(236, 236, 236, 0.4);
     border-radius: 10px;
   }
   
   .branch__selectDistrict{
-    /* width: 516px;
-    height: 56.39px; */
-    margin-top: 44px;
-      
+    margin-top: 44px;  
     background-color: rgba(236, 236, 236, 0.4);
     border-radius: 10px;
   }
   
   .branch__selectBranch{
-    /* width: 516px;
-    height: 56.39px; */
-    margin-top: 44px;
-      
+    margin-top: 44px;  
     background-color: rgba(236, 236, 236, 0.4);
     border-radius: 10px;
   }
@@ -149,18 +126,13 @@ border-radius: 10px;
   .Branch_upload {
     width: 100%;
     height: 400px;
-  /* margin-top: 82px;
-  margin-left: 50px; */
     background: rgba(196, 196, 196, 0.2);
     border: 2px dashed #000000;
     border-radius: 10px;
     padding: 0;
   }
   .Branch_input {
-      width: 100%;
-    /* width: 516px; */
-    /* height: 56.39px;
-   */
+    width: 100%;
     background: rgba(236, 236, 236, 0.4);
     border-radius: 10px;
     font-family: Roboto;
@@ -168,54 +140,49 @@ border-radius: 10px;
     font-weight: 500;
     font-size: 18px;
     line-height: 21px;
-    /* identical to box height */
-    /* padding-left: 20px;
-    padding-top: 16px; */
-  
     color: #858585;
   }
+
   .Branch_text {
     /* width: 501px;
     height: 60px; */
   
   
 }
+
 .branch_submit{
-    width: 202px;
-height: 55px;
-
-
-background: #96B6E7;
-border-radius: 20px;
+  width: 202px;
+  height: 55px;
+  background: #96B6E7;
+  border-radius: 20px;
 }
 
-.branch__button{
-    
+.branch__button{  
   margin-top: 100px;
   text-align: center;
   margin-bottom: 40px;
 }
-  .branch__upload {
+  
+.branch__upload {
     /* margin-bottom: 73px; 
     margin-top: 82px;*/
-
-  }
-  .branch__text1 {
-    /* margin-bottom: 70px; */
-    /* margin-top: 73px; */
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 17px;
-    line-height: 20px;
-    text-align: center;
+}
   
-    color: #858585;
-  }
-  .branch__date {
+.branch__text1 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 20px;
+  text-align: center;
+  color: #858585;
+}
+  
+.branch__date {
     /* margin-bottom: 43px; */
   }
-  .branch__text2 {
+  
+.branch__text2 {
     /* margin-bottom: 106px; */
     font-family: Roboto;
     font-style: normal;
@@ -223,7 +190,6 @@ border-radius: 20px;
     font-size: 17px;
     line-height: 20px;
     text-align: center;
-  
     color: #858585;
   }
   .branch__impLinks{
@@ -232,4 +198,17 @@ border-radius: 20px;
 
   .Admin_branch_authorI{
     height: 80px;
+  }
+
+  .downloads_submit{
+    width: 202px;
+    height: 55px;
+    background: #96B6E7;
+    border-radius: 20px;
+  }
+  
+  .downloads__button{
+    margin-top: 100px;
+    text-align: center;
+    margin-bottom: 40px;
   }

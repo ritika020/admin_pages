@@ -7,33 +7,22 @@ class branch extends React.Component {
   render() {
     return (
         <div className="container">
-<div className="form__main row align-items-end">
-    <div className="downloads__col1 col-md-6 col-12">
-    {/* <div className="Branch_main"> */}
-              
-              <div className="downloads__upload mt-5">
-            <input className="Downloads_upload" type="file"/>
+        <div className="form__main row align-items-end">  
+        <div className="downloads__col1 col-md-6 col-12">
+            <div className="downloads__upload mt-5">
+            <input className="downloads_upload" type="file"/>
             </div>
-           
-          
-          
-          </div>
-          {/* <div className="col-md-6 col-sm-12">
-
-          </div> */}
-          
-
-    {/* </div> */}
-    <div className="downloads__col2 col-md-6 col-12">
+        </div>
+        
+      <div className="downloads__col2 col-md-6 col-12">
         <form>
         <div className="downloads__head">
             Entries
         </div>
         <div className="downloads__title">
         <textarea
-              name="Title"
+                name="Title"
                 onChange={this.handleChange}
-              
                 class="form-control"
                 placeholder="Title"
                 rows="3"
@@ -43,9 +32,8 @@ class branch extends React.Component {
         </div>
         <div className="downloads__body">
         <textarea
-              name="Body"
+                name="Body"
                 onChange={this.handleChange}
-              
                 class="form-control"
                 placeholder="Body"
                 rows="5"
@@ -53,8 +41,6 @@ class branch extends React.Component {
               ></textarea>                                         
                {/* <span className="Form__span">Body</span> */}
         </div>
-        
-      
         </form>
     </div>
     </div>
@@ -62,7 +48,7 @@ class branch extends React.Component {
     <div className="row downloads__button d-flex justify-content-center">
             <button
               class="button"
-              className="downloads__submit form-control"
+              className="downloads_submit form-control"
               style={{ alignSelf: "center" }}
             >
               {" "}
