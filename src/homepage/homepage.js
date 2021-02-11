@@ -9,13 +9,16 @@ class homepage extends React.Component {
     return (
         <div>
     <Link to="/branchNews" className="HomePage__link">
-        branch News
+        Branch News
       </Link>
+      <br></br>
       <Link to="/centralNews" className="HomePage__link">
-      central News
+      Central News
       </Link>
+      <br></br>
+
       <Link to="/downloadsNews" className="HomePage__link">
-        downloads News
+        Downloads News
       </Link>
       </div>
       

@@ -20,7 +20,7 @@ class branch extends React.Component {
             </div>
          
           <div className="branch__date mt-4">
-          <input type="date" className="Branch_input form-control" placeholder="DD/MM/YYYY"/>
+          <input type="date" className="Branch_input form-control" placeholder="DD/MM/YYYY" style={{"color":"#858585"}}/>
           </div>
           <div className="branch__text2 mt-4">
           <div className="Branch_text">Select date only when required. Not selecting it, this form shall automatically shall take the input time of submission.</div>

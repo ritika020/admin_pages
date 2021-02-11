@@ -59,10 +59,10 @@ textarea:not(:placeholder-shown) + span {
       line-height: 1.5; */
     font-size: 14px;
     line-height: 21px;
-    font-family: "Poppins", sans-serif;
     font-style: normal;
     font-weight: normal;
-    color: #390969;
+    font-family: "Roboto",sans-serif;
+    color: white;
     background-color: rgba(236, 236, 236, 0.4);
     background-clip: padding-box;
     border: 1px solid #cadeef;
@@ -79,6 +79,7 @@ textarea:not(:placeholder-shown) + span {
 
   .branch__head{
     font-family: "Poppins", sans-serif;
+    text-decoration: underline;
     font-size: 26px;
     font-style: normal;
     font-weight: 500;

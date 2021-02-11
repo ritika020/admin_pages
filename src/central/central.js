@@ -21,7 +21,7 @@ class central extends React.Component {
             </div>
          
             <div className="central__date mt-4">
-            <input type="date" className="Central_input form-control" placeholder="DD/MM/YYYY"/>
+            <input type="date" className="Central_input form-control" placeholder="DD/MM/YYYY" style={{"color":"#858585"}}/>
             </div>
           
             <div className="central__text2 mt-4">
@@ -113,10 +113,10 @@ class central extends React.Component {
     </div>
     </div>
 
-    <div className="row central__button d-flex justify-content-center">
+    <div className="row downloads__button d-flex justify-content-center">
             <button
               class="button"
-              className="central_submit1 form-control"
+              className="downloads_submit form-control"
               style={{ alignSelf: "center" }}
             >
               {" "}
