@@ -7,7 +7,7 @@ class central extends React.Component {
   render() {
     return (
         <div className="container">
-        <div className="branch__sec">
+        <div className="central__sec">
 
         <div className="form__main row">
         <div className="central__col1 col-md-6 col-12">

@@ -29,7 +29,7 @@ textarea:not(:placeholder-shown) + span {
   padding: 0.175rem 0.5rem;
 }
   .placeholder{
-    font-family: Roboto;
+    font-family: "Roboto",sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 22px;

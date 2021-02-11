@@ -7,7 +7,7 @@ class branch extends React.Component {
   render() {
     return (
         <div className="container">
-                <div className="branch__sec">
+                <div className="downloads__sec">
 
         <div className="form__main row align-items-end">  
         <div className="downloads__col1 col-md-6 col-12">

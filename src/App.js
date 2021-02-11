@@ -12,6 +12,7 @@ function App() {
      {/* <Branch/> */}
      <BrowserRouter>
         <Switch>
+        <Route path="/admin_pages" component={homepage} exact />
           <Route path="/" component={homepage} exact />
           <Route path="/branchNews" component={branch} exact />
           <Route path="/centralNews" component={central} exact />

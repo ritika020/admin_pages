@@ -33,7 +33,7 @@ span {
   }
   
   .placeholder{
-    font-family: Roboto;
+    font-family: "Roboto",sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 22px;
@@ -203,7 +203,7 @@ border-radius: 20px;
   }
 
   
-  .branch__sec{
+  .central__sec{
     background-color: white;
     padding-left: 50px;
     padding-right: 50px ; 
