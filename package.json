@@ -1,6 +1,6 @@
 {
   "name": "upcloud-admin",
-  "homepage": " http://ritika020.github.io/admin-pages",
+  "homepage": " http://ritika020.github.io/admin_pages",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
