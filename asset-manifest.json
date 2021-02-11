@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/admin-pages/static/css/main.872da1e4.chunk.css",
-    "main.js": "/admin-pages/static/js/main.a6d5ce32.chunk.js",
-    "main.js.map": "/admin-pages/static/js/main.a6d5ce32.chunk.js.map",
-    "runtime-main.js": "/admin-pages/static/js/runtime-main.4f32b19f.js",
-    "runtime-main.js.map": "/admin-pages/static/js/runtime-main.4f32b19f.js.map",
-    "static/js/2.2791e120.chunk.js": "/admin-pages/static/js/2.2791e120.chunk.js",
-    "static/js/2.2791e120.chunk.js.map": "/admin-pages/static/js/2.2791e120.chunk.js.map",
-    "static/js/3.4dfb5fa1.chunk.js": "/admin-pages/static/js/3.4dfb5fa1.chunk.js",
-    "static/js/3.4dfb5fa1.chunk.js.map": "/admin-pages/static/js/3.4dfb5fa1.chunk.js.map",
-    "index.html": "/admin-pages/index.html",
-    "static/css/main.872da1e4.chunk.css.map": "/admin-pages/static/css/main.872da1e4.chunk.css.map",
-    "static/js/2.2791e120.chunk.js.LICENSE.txt": "/admin-pages/static/js/2.2791e120.chunk.js.LICENSE.txt",
-    "static/media/logo.6ce24c58.svg": "/admin-pages/static/media/logo.6ce24c58.svg"
+    "main.css": "/admin_pages/static/css/main.872da1e4.chunk.css",
+    "main.js": "/admin_pages/static/js/main.a6d5ce32.chunk.js",
+    "main.js.map": "/admin_pages/static/js/main.a6d5ce32.chunk.js.map",
+    "runtime-main.js": "/admin_pages/static/js/runtime-main.9436e1dd.js",
+    "runtime-main.js.map": "/admin_pages/static/js/runtime-main.9436e1dd.js.map",
+    "static/js/2.2791e120.chunk.js": "/admin_pages/static/js/2.2791e120.chunk.js",
+    "static/js/2.2791e120.chunk.js.map": "/admin_pages/static/js/2.2791e120.chunk.js.map",
+    "static/js/3.4dfb5fa1.chunk.js": "/admin_pages/static/js/3.4dfb5fa1.chunk.js",
+    "static/js/3.4dfb5fa1.chunk.js.map": "/admin_pages/static/js/3.4dfb5fa1.chunk.js.map",
+    "index.html": "/admin_pages/index.html",
+    "static/css/main.872da1e4.chunk.css.map": "/admin_pages/static/css/main.872da1e4.chunk.css.map",
+    "static/js/2.2791e120.chunk.js.LICENSE.txt": "/admin_pages/static/js/2.2791e120.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/admin_pages/static/media/logo.6ce24c58.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.4f32b19f.js",
+    "static/js/runtime-main.9436e1dd.js",
     "static/js/2.2791e120.chunk.js",
     "static/css/main.872da1e4.chunk.css",
     "static/js/main.a6d5ce32.chunk.js"
