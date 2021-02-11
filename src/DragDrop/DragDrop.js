@@ -6,9 +6,10 @@ import img from "../Images/img.svg";
 
 export default function DragDrop() {
   const [fileNames, setFileNames] = useState([]);
-  const handleDrop = acceptedFiles =>
+  const handleDrop = acceptedFiles => {
     setFileNames(acceptedFiles.map(file => file.name));
-
+    console.log(acceptedFiles[0])
+  }
   return (
     <div>
       <Dropzone onDrop={handleDrop}>

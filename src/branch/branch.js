@@ -1,10 +1,36 @@
 import React from "react";
 import DragDrop from "../DragDrop/DragDrop";
 import "./branch.css";
+import {sendBranchNews} from '../ApiHandling/forBranchNews';
 
 class branch extends React.Component {
+  constructor(){
+    super();
+    this.state = {
+      title:"",
+      subtitle:"",
+      description:"",
+      date:"",
+      details:"",
+      author:"",
+      state:"",
+      branch:"",
+      district:"",
+      trending:""
+    }
+     this.handleChange = this.handleChange.bind(this);
+     this.handleSubmit = this.handleSubmit.bind(this);
+  }
 
-        
+  handleChange(e) {
+    this.setState({ 
+      [e.target.name]: e.target.value });
+  }
+
+  handleSubmit(e){
+    e.preventDefault();
+  }
+
   render() {
     return (
         <div className="container">
@@ -40,7 +66,8 @@ class branch extends React.Component {
         </div>
         <div className="branch__title">
         <textarea
-                name="Title"
+                name="title"
+                id="title"
                 onChange={this.handleChange}    
                 class="form-control"
                 placeholder="Title"
@@ -52,6 +79,7 @@ class branch extends React.Component {
         <div className="branch__body">
         <textarea
                 name="Body"
+                id=""
                 onChange={this.handleChange}
                 class="form-control"
                 placeholder="Body"
@@ -63,7 +91,8 @@ class branch extends React.Component {
         <div className="branch__mentionAuthor">
         <input
                 className="Admin_branch_authorI"
-                name="mentionAuthor"
+                name="author"
+                id="author"
                 onChange={this.handleChange}
                 type="text"
                 class="form-control "
@@ -75,7 +104,8 @@ class branch extends React.Component {
         </div>
         <div className="branch__selectState">
         <input
-                name="selectState"
+                name="state"
+                id="state"
                 onChange={this.handleChange}
                 type="text"
                 class="form-control "
@@ -87,7 +117,8 @@ class branch extends React.Component {
         </div>
         <div className="branch__selectDistrict">
         <input
-                name="selectDistrict"
+                name="district"
+                id="district"
                 onChange={this.handleChange}
                 type="text"
                 class="form-control "
@@ -98,7 +129,8 @@ class branch extends React.Component {
               </div>
         <div className="branch__selectBranch">
         <input
-                name="selectBranch"
+                name="branch"
+                id="branch"
                 onChange={this.handleChange}
                 type="text"
                 class="form-control "
@@ -114,8 +146,10 @@ class branch extends React.Component {
     <div className="row downloads__button d-flex justify-content-center">
             <button
               class="button"
+              type="submit"
               className="downloads_submit form-control"
               style={{ alignSelf: "center" }}
+              onClick={this.handleSubmit}
             >
               {" "}
               Submit
@@ -129,3 +163,44 @@ class branch extends React.Component {
 }
 
 export default branch;
+
+
+// image : [{
+//   type : String
+// }],
+// title : {
+//   type : String, 
+//   required : true
+// },
+// subtitle : {
+//   type : String
+// },
+// description : {
+//   type : String
+// },
+// date : {
+//   type :String
+// },
+// Date : {
+//   type : Date,
+//   default : Date.now
+// },
+// details : {
+//   type : String
+// },
+// author : {
+//   type :String
+// },
+// state : {
+//   type : String
+// },
+// branch : {
+//   type : String
+// },
+// district : {
+//   type : String
+// },
+// trending : {
+//   type : Number,
+//   default : 0
+// }
