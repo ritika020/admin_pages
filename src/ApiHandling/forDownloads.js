@@ -3,7 +3,7 @@ import axios from "axios";
 export const sendDownloadData = async (data) => {
   console.log(data);
   return await axios
-    .post("https://nimaaaa-project.herokuapp.com/download", data, {
+    .post("https://nimaaaa-project.herokuapp.com/downloads", data, {
       headers: {
         accept: "application/json",
         "Content-Type": "multipart/form-data",

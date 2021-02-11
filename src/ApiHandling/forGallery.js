@@ -3,7 +3,7 @@ import axios from "axios";
 export const sendGalleryData = async (data) => {
   console.log(data);
   return await axios
-    .post("https://nimaaaa-project.herokuapp.com/galery", data, {
+    .post("https://nimaaaa-project.herokuapp.com/gallery", data, {
       headers: {
         accept: "application/json",
         "Content-Type": "multipart/form-data",

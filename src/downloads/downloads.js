@@ -1,6 +1,5 @@
 import React from "react";
 import Dropzone from "react-dropzone";
-
 import "./downloads.css";
 import { sendDownloadData } from "../ApiHandling/forDownloads";
 import img from "../Images/img.svg";
