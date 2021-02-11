@@ -9,7 +9,7 @@ class branch extends React.Component {
         <div className="container">
                 <div className="downloads__sec">
 
-        <div className="form__main row align-items-end">  
+        <div className="form__main row ">  
         <div className="downloads__col1 col-md-6 col-12">
             <div className="downloads__upload mt-5">
             <input className="downloads_upload" type="file"/>
