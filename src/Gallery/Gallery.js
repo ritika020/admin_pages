@@ -1,14 +1,17 @@
 import React from "react";
-import DragDrop from "../DragDrop/DragDrop";
-import "./downloads.css";
-import { sendDownloadData } from "../ApiHandling/forDownloads";
-class branch extends React.Component {
+// import DragDrop from "../DragDrop/DragDrop";
+import "./Gallery.css";
+import Dropzone from "react-dropzone";
+import img from "../Images/img.svg";
+import { sendGalleryData } from "../ApiHandling/forGallery";
+class Gallery extends React.Component {
   constructor() {
     super();
     this.state = {
       title: "",
       description: "",
       files: [],
+      names: "",
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -18,6 +21,13 @@ class branch extends React.Component {
     console.log(incoming);
     let tempFiles = this.state.files;
     tempFiles.push(...incoming);
+    let names;
+    tempFiles.map((file, index) => {
+      names = names + file.name;
+    });
+    this.setState({
+      names: names,
+    });
     this.setState({
       files: tempFiles,
     });
@@ -35,21 +45,16 @@ class branch extends React.Component {
     console.log(this.state);
     data.append("title", this.state.title);
     data.append("description", this.state.description);
-    data.append("date", this.state.date);
-    data.append("details", this.state.details);
-    data.append("author", this.state.author);
-    data.append("state", this.state.state);
-    data.append("branch", this.state.branch);
-    data.append("district", this.state.district);
+    console.log(this.state.files);
     this.state.files.map((file, index) =>
       data.append("myFiles", file, file.name)
     );
     console.log(data.get("myFiles"));
-    sendDownloadData(data)
+    sendGalleryData(data)
       .then((response) => {
         console.log(response);
         if (response.data.status === "success") {
-          alert("News added");
+          alert("Gallery added");
         } else {
           alert("Some error encountered. Please Try Again");
         }
@@ -64,20 +69,39 @@ class branch extends React.Component {
   render() {
     return (
       <div className="container">
-        <div className="downloads__sec">
+        <div className="gallery__sec">
           <div className="form__main row ">
-            <div className="downloads__col1 col-md-6 col-12">
-              <div className="downloads__upload mt-5">
-                <DragDrop />
+            <div className="gallery__col1 col-md-6 col-12">
+              <div className="gallery__upload mt-5">
+                <Dropzone onDrop={this.handleDrop}>
+                  {({ getRootProps, getInputProps }) => (
+                    <div {...getRootProps({ className: "dropzone" })}>
+                      <input {...getInputProps()} />
+                      <p className="Admin_text">
+                        Drag'n'drop files, or click to select files
+                      </p>
+                      <p className="Admin_text1">
+                        <img
+                          src={img}
+                          className="Admin_arrow"
+                          alt="upload arrow"
+                        ></img>
+                        Extra Uploads
+                      </p>
+                    </div>
+                  )}
+                </Dropzone>
+                {this.state.names}
               </div>
             </div>
 
-            <div className="downloads__col2 col-md-6 col-12">
+            <div className="gallery__col2 col-md-6 col-12">
               <form>
-                <div className="downloads__head">Entries</div>
-                <div className="downloads__title">
+                <div className="gallery__head">Entries</div>
+                <div className="gallery__title">
                   <textarea
-                    name="Title"
+                    name="title"
+                    id="title"
                     onChange={this.handleChange}
                     class="form-control"
                     placeholder="Title"
@@ -86,14 +110,15 @@ class branch extends React.Component {
                   ></textarea>
                   {/* <span className="Form__span">Title</span> */}
                 </div>
-                <div className="downloads__body">
+                <div className="gallery__body">
                   <textarea
-                    name="Body"
                     onChange={this.handleChange}
                     class="form-control"
                     placeholder="Body"
                     rows="5"
                     required
+                    name="description"
+                    id="description"
                   ></textarea>
                   {/* <span className="Form__span">Body</span> */}
                 </div>
@@ -101,10 +126,11 @@ class branch extends React.Component {
             </div>
           </div>
 
-          <div className="row downloads__button d-flex justify-content-center">
+          <div className="row gallery__button d-flex justify-content-center">
             <button
-              class="button"
-              className="downloads_submit form-control"
+              class="submit"
+              onClick={this.handleSubmit}
+              className="gallery_submit form-control"
               style={{ alignSelf: "center" }}
             >
               {" "}
@@ -117,4 +143,4 @@ class branch extends React.Component {
   }
 }
 
-export default branch;
+export default Gallery;
