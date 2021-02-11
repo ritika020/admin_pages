@@ -1,4 +1,5 @@
 import React from "react";
+import DragDrop from "../DragDrop/DragDrop";
 import "./downloads.css";
 
 class branch extends React.Component {
@@ -12,7 +13,7 @@ class branch extends React.Component {
         <div className="form__main row ">  
         <div className="downloads__col1 col-md-6 col-12">
             <div className="downloads__upload mt-5">
-            <input className="downloads_upload" type="file"/>
+           <DragDrop/>
             </div>
         </div>
         

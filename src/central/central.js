@@ -1,6 +1,6 @@
 import React from "react";
 import "./central.css";
-
+import DragDrop from "../DragDrop/DragDrop";
 class central extends React.Component {
 
         
@@ -13,7 +13,7 @@ class central extends React.Component {
         <div className="central__col1 col-md-6 col-12">
               
             <div className="central__upload mt-5">
-            <input className="Central_upload" type="file"/>
+            <DragDrop/>
             </div>
            
             <div className="central__text1 mt-4">
