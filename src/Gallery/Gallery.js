@@ -128,7 +128,7 @@ class Gallery extends React.Component {
 
           <div className="row gallery__button d-flex justify-content-center">
             <button
-              class="submit"
+              type="submit"
               onClick={this.handleSubmit}
               className="gallery_submit form-control"
               style={{ alignSelf: "center" }}

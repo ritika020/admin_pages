@@ -1,14 +1,17 @@
 import React from "react";
-import DragDrop from "../DragDrop/DragDrop";
+import Dropzone from "react-dropzone";
+
 import "./downloads.css";
 import { sendDownloadData } from "../ApiHandling/forDownloads";
+import img from "../Images/img.svg";
 class branch extends React.Component {
   constructor() {
     super();
     this.state = {
       title: "",
       description: "",
-      files: [],
+      files: null,
+      filename: "",
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -16,10 +19,9 @@ class branch extends React.Component {
 
   handleDrop = (incoming) => {
     console.log(incoming);
-    let tempFiles = this.state.files;
-    tempFiles.push(...incoming);
+
     this.setState({
-      files: tempFiles,
+      files: incoming[0],
     });
   };
 
@@ -35,16 +37,7 @@ class branch extends React.Component {
     console.log(this.state);
     data.append("title", this.state.title);
     data.append("description", this.state.description);
-    data.append("date", this.state.date);
-    data.append("details", this.state.details);
-    data.append("author", this.state.author);
-    data.append("state", this.state.state);
-    data.append("branch", this.state.branch);
-    data.append("district", this.state.district);
-    this.state.files.map((file, index) =>
-      data.append("myFiles", file, file.name)
-    );
-    console.log(data.get("myFiles"));
+    data.append("image", this.state.files, this.state.files.name);
     sendDownloadData(data)
       .then((response) => {
         console.log(response);
@@ -68,7 +61,20 @@ class branch extends React.Component {
           <div className="form__main row ">
             <div className="downloads__col1 col-md-6 col-12">
               <div className="downloads__upload mt-5">
-                <DragDrop />
+                <Dropzone onDrop={this.handleDrop}>
+                  {({ getRootProps, getInputProps }) => (
+                    <div {...getRootProps({ className: "dropzone" })}>
+                      <input {...getInputProps()} />
+                      <p className="Admin_text">
+                        Drag'n'drop files, or click to select files
+                      </p>
+                      <p className="Admin_text1">
+                        <img src={img} className="Admin_arrow"></img>Extra
+                        Uploads
+                      </p>
+                    </div>
+                  )}
+                </Dropzone>
               </div>
             </div>
 
@@ -77,7 +83,8 @@ class branch extends React.Component {
                 <div className="downloads__head">Entries</div>
                 <div className="downloads__title">
                   <textarea
-                    name="Title"
+                    name="title"
+                    id="title"
                     onChange={this.handleChange}
                     class="form-control"
                     placeholder="Title"
@@ -88,7 +95,8 @@ class branch extends React.Component {
                 </div>
                 <div className="downloads__body">
                   <textarea
-                    name="Body"
+                    name="description"
+                    id="description"
                     onChange={this.handleChange}
                     class="form-control"
                     placeholder="Body"
@@ -103,7 +111,8 @@ class branch extends React.Component {
 
           <div className="row downloads__button d-flex justify-content-center">
             <button
-              class="button"
+              type="submit"
+              onClick={this.handleSubmit}
               className="downloads_submit form-control"
               style={{ alignSelf: "center" }}
             >
