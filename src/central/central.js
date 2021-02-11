@@ -7,6 +7,8 @@ class central extends React.Component {
   render() {
     return (
         <div className="container">
+        <div className="branch__sec">
+
         <div className="form__main row">
         <div className="central__col1 col-md-6 col-12">
               
@@ -99,6 +101,7 @@ class central extends React.Component {
         <input
                 name="impLinks"
                 onChange={this.handleChange}
+
                 type="text"
                 class="form-control "
                 placeholder="Important Links"
@@ -110,15 +113,16 @@ class central extends React.Component {
     </div>
     </div>
 
-    <div className="row downloads__button d-flex justify-content-center">
+    <div className="row central__button d-flex justify-content-center">
             <button
               class="button"
-              className="downloads_submit form-control"
+              className="central_submit1 form-control"
               style={{ alignSelf: "center" }}
             >
               {" "}
               Submit
             </button>
+            </div>
             </div>
 </div>
         

@@ -7,6 +7,8 @@ class branch extends React.Component {
   render() {
     return (
         <div className="container">
+                <div className="branch__sec">
+
         <div className="form__main row align-items-end">  
         <div className="downloads__col1 col-md-6 col-12">
             <div className="downloads__upload mt-5">
@@ -54,7 +56,8 @@ class branch extends React.Component {
               {" "}
               Submit
             </button>
-            </div>
+            </div></div>
+
 </div>
         
     );

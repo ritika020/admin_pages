@@ -39,11 +39,18 @@ textarea:not(:placeholder-shown) + span {
   }
   .form__main {
     padding: 0 !important;
-    border-color: #96B6E7;
-    border: 100px;
+    /* border-color: #96B6E7; */
+    
+    
+  }
+  .branch__mainDiv{
+    background-color: #96B6E7;
 
   }
-  
+  .branch__secDiv{
+    background-color:white;
+    /* margin: 10px; */
+  }
 .form-control {
     display: block;
     width: 100%;
@@ -210,5 +217,12 @@ textarea:not(:placeholder-shown) + span {
   .downloads__button{
     margin-top: 100px;
     text-align: center;
-    margin-bottom: 40px;
+     padding-bottom: 40px; 
+     margin-bottom: 0 !important;  
+  }
+
+  .branch__sec{
+    background-color: white;
+    padding-left: 50px;
+    padding-right: 50px ; 
   }

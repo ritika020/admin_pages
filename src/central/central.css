@@ -201,3 +201,10 @@ border-radius: 20px;
     text-align: center;
     margin-bottom: 40px;
   }
+
+  
+  .branch__sec{
+    background-color: white;
+    padding-left: 50px;
+    padding-right: 50px ; 
+  }
