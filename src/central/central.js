@@ -1,7 +1,8 @@
 import React from "react";
 import "./central.css";
-import DragDrop from "../DragDrop/DragDrop";
-
+import Dropzone from "react-dropzone";
+import {sendCentralNews} from '../ApiHandling/forNews';
+import img from '../Images/img.svg';
 
 class central extends React.Component {
       constructor(){
@@ -13,9 +14,20 @@ class central extends React.Component {
           author:"",
           state:"",
           district:"",
+          trending:"",
+          files:[]
         }
          this.handleChange = this.handleChange.bind(this);
          this.handleSubmit = this.handleSubmit.bind(this);
+      }
+
+      handleDrop = (incoming) =>{
+        console.log(incoming)
+        let tempFiles = this.state.files;
+        tempFiles.push(...incoming)
+        this.setState({
+          files : tempFiles
+        })
       }
     
       handleChange(e) {
@@ -25,6 +37,36 @@ class central extends React.Component {
     
       handleSubmit(e){
         e.preventDefault();
+        const data = new FormData();
+        console.log(this.state)
+        data.append("title", this.state.title)
+        data.append("description", this.state.description)
+        data.append("date", this.state.date)
+        data.append("details", this.state.details)
+        data.append("author", this.state.author)
+        data.append("state", this.state.state)
+        data.append("branch", this.state.branch)
+        data.append("district", this.state.district)
+        this.state.files.map((file, index) => {
+          data.append('myFiles', file, file.name)
+        }
+        )
+        console.log(data.get('myFiles'));
+        sendCentralNews(data)
+          .then((response) => { 
+            console.log(response)
+            if(response.data.status === "success"){
+              alert('News added')
+            }
+            else{
+              alert('Some error encountered. Please Try Again')
+            }
+          })
+
+          .catch((err) => {
+            console.log(err);
+            alert('Some error encountered. Please Try Again')
+          });
       }
       
       
@@ -37,7 +79,16 @@ class central extends React.Component {
         <div className="central__col1 col-md-6 col-12">
               
             <div className="central__upload mt-5">
-            <DragDrop/>
+                <Dropzone onDrop={this.handleDrop}>
+                  {({ getRootProps, getInputProps }) => (
+                    <div {...getRootProps({ className: "dropzone" })}>
+                      <input {...getInputProps()} />
+                      <p className="Admin_text">Drag'n'drop files, or click to select files</p>
+                      <p className="Admin_text1"><img src={img} className="Admin_arrow"></img>Extra Uploads</p>
+                      
+                    </div>
+                  )}
+                </Dropzone>
             </div>
            
             <div className="central__text1 mt-4">
@@ -45,7 +96,7 @@ class central extends React.Component {
             </div>
          
             <div className="central__date mt-4">
-            <input type="date" className="Central_input form-control" placeholder="DD/MM/YYYY" style={{"color":"#858585"}}/>
+            <input type="date" name="date" id="date" className="Central_input form-control" placeholder="DD/MM/YYYY" style={{"color":"#858585"}}/>
             </div>
           
             <div className="central__text2 mt-4">
@@ -75,8 +126,8 @@ class central extends React.Component {
       
         <div className="central__body">
              <textarea
-                name="Body"
-                id=""                
+                name="description"
+                id="description"                
                 onChange={this.handleChange}  
                 class="form-control"
                 placeholder="Body"
@@ -148,6 +199,7 @@ class central extends React.Component {
               class="button"
               className="downloads_submit form-control"
               style={{ alignSelf: "center" }}
+              onClick={this.handleSubmit}
             >
               {" "}
               Submit

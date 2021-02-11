@@ -2,7 +2,7 @@ import React from "react";
 import Dropzone from "react-dropzone";
 //import DragDrop from "../DragDrop/DragDrop";
 import "./branch.css";
-import {sendBranchNews} from '../ApiHandling/forBranchNews';
+import {sendBranchNews} from '../ApiHandling/forNews';
 import img from '../Images/img.svg'
 
 class branch extends React.Component {
@@ -53,18 +53,23 @@ class branch extends React.Component {
     data.append("state",this.state.state)
     data.append("branch",this.state.branch)
     data.append("district",this.state.district)
-    //let tempImages = []
-    // tempImages.push(this.state.files)
-    // this.state.files.map((file,index)=>{
-    //   tempImages.push('image',file,file.name)
-    // }
-    // )
-    data.append('image', this.state.files[0], this.state.files[0].name);
-    console.log(data.get('image'));
+     this.state.files.map((file,index)=>{
+       data.append('myFiles',file,file.name)
+     }
+     )
+    console.log(data.get('myFiles'));
     sendBranchNews(data)
-      .then((response) => { console.log(response) })
+      .then((response) => { console.log(response) 
+        if(response.data.status === "success"){
+          alert('News added')
+        }
+        else{
+          alert('Some error encountered. Please Try Again')
+        }
+      })
       .catch((err) => {
         console.log(err);
+        alert('Some error encountered. Please Try Again')
       });
   }
 
@@ -84,9 +89,16 @@ class branch extends React.Component {
                       <input {...getInputProps()} />
                       <p className="Admin_text">Drag'n'drop files, or click to select files</p>
                       <p className="Admin_text1"><img src={img} className="Admin_arrow"></img>Extra Uploads</p>
-                    </div>
+                     
+                      </div>
                   )}
                 </Dropzone>
+                {
+                    this.state.files.map((image)=>(
+                      console.log(image)
+                      // <h1 style={{color:'black'}}>{image.name}</h1>
+                      ))
+                }
               </div>
 
               <div className="branch__text1 mt-4">
