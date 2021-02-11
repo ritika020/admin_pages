@@ -62,7 +62,7 @@ textarea:not(:placeholder-shown) + span {
     font-style: normal;
     font-weight: normal;
     font-family: "Roboto",sans-serif;
-    color: white;
+    color: #121212;
     background-color: rgba(236, 236, 236, 0.4);
     background-clip: padding-box;
     border: 1px solid #cadeef;

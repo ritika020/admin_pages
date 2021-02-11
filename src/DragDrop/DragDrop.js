@@ -10,6 +10,7 @@ export default function DragDrop() {
     setFileNames(acceptedFiles.map(file => file.name));
     console.log(acceptedFiles[0])
   }
+  
   return (
     <div>
       <Dropzone onDrop={handleDrop}>
