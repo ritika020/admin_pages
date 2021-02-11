@@ -1,10 +1,34 @@
 import React from "react";
 import "./central.css";
 import DragDrop from "../DragDrop/DragDrop";
-class central extends React.Component {
 
-        
-  render() {
+
+class central extends React.Component {
+      constructor(){
+        super();
+        this.state = {
+          title:"",
+          date:"",
+          details:"",
+          author:"",
+          state:"",
+          district:"",
+        }
+         this.handleChange = this.handleChange.bind(this);
+         this.handleSubmit = this.handleSubmit.bind(this);
+      }
+    
+      handleChange(e) {
+        this.setState({ 
+          [e.target.name]: e.target.value });
+      }
+    
+      handleSubmit(e){
+        e.preventDefault();
+      }
+      
+      
+ render() {
     return (
         <div className="container">
         <div className="central__sec">
@@ -38,7 +62,8 @@ class central extends React.Component {
         </div>
         <div className="central__title">
               <textarea
-                name="Title"
+                name="title"
+                id="title"
                 onChange={this.handleChange}  
                 class="form-control"
                 placeholder="Title"
@@ -51,6 +76,7 @@ class central extends React.Component {
         <div className="central__body">
              <textarea
                 name="Body"
+                id=""                
                 onChange={this.handleChange}  
                 class="form-control"
                 placeholder="Body"
@@ -63,7 +89,8 @@ class central extends React.Component {
         <div className="central__selectAuthor">
            <input
                className="Admin_central_authorI"
-                name="selectAuthor"
+                name="author"
+                id="author"
                 onChange={this.handleChange}
                 type="text"
                 class="form-control "
@@ -76,7 +103,8 @@ class central extends React.Component {
         </div>
         <div className="central__selectState">
            <input
-                name="selectState"
+                name="state"
+                id="state"                
                 onChange={this.handleChange}  
                 type="text"
                 class="form-control "
@@ -88,7 +116,8 @@ class central extends React.Component {
         </div>
         <div className="central__selectBranch">
           <input
-                name="selectDistrict"
+                name="district"
+                id="district"
                 onChange={this.handleChange}    
                 type="text"
                 class="form-control "
@@ -99,7 +128,8 @@ class central extends React.Component {
               </div>
         <div className="central__impLinks">
         <input
-                name="impLinks"
+                name="details"
+                id="details"
                 onChange={this.handleChange}
 
                 type="text"
