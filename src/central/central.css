@@ -234,4 +234,53 @@ textarea:not(:placeholder-shown) + span {
     background-color: white;
     border: none;
   }
+  .central_dropzone {
+    height: 353px;
+  }
+  .central_dragtext {
+    text-align: center;
+    font-size: 21px !important;
+    padding-top: 160px !important;
+  }
+  .central_dragtext1 {
+    font-size: 21px;
+    text-align: center;
+  }
+}
+
+.central__dropzone {
+  width: 100%;
+  height: 400px;
+  background: rgba(196, 196, 196, 0.2);
+  border: 2px dashed #000000;
+  border-radius: 10px;
+  padding: 0;
+}
+.central_dragtext {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 23px;
+
+  color: #858585;
+  padding-top: 200px;
+}
+.central_dragtext1 {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 23px;
+
+  color: #858585;
+  padding-top: 40px;
+}
+.central_arrow {
+  padding-right: 31px;
+}
+@media (min-width: 510px) {
+  .central__hamburger {
+    display: none;
+  }
 }
