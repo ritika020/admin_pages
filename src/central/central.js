@@ -1,6 +1,8 @@
 import React from "react";
 import "./central.css";
 import DragDrop from "../DragDrop/DragDrop";
+import menu from "../Images/hamburger.png";
+
 class central extends React.Component {
 
         
@@ -8,7 +10,7 @@ class central extends React.Component {
     return (
         <div className="container">
         <div className="central__sec">
-
+        <button className ="central__hamburger"><img src={menu} className="central__menu align-items-start"></img></button>
         <div className="form__main row">
         <div className="central__col1 col-md-6 col-12">
               

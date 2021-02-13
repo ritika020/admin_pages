@@ -1,6 +1,7 @@
 import React from "react";
 import DragDrop from "../DragDrop/DragDrop";
 import "./downloads.css";
+import menu from "../Images/hamburger.png";
 
 class branch extends React.Component {
 
@@ -9,7 +10,7 @@ class branch extends React.Component {
     return (
         <div className="container">
                 <div className="downloads__sec">
-
+                <button className ="downloads__hamburger"><img src={menu} className="downloads__menu align-items-start"></img></button>
         <div className="form__main row ">  
         <div className="downloads__col1 col-md-6 col-12">
             <div className="downloads__upload mt-5">

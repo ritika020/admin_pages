@@ -1,6 +1,7 @@
 import React from "react";
 import DragDrop from "../DragDrop/DragDrop";
 import "./branch.css";
+import menu from "../Images/hamburger.png";
 
 class branch extends React.Component {
 
@@ -9,6 +10,7 @@ class branch extends React.Component {
     return (
         <div className="container">
         <div className="branch__sec">
+          <img src={menu} className="branch__menu align-items-start"></img>
         <div className="form__main row align-items-end">
         <div className="branch__col1 col-md-6 col-12">
               
