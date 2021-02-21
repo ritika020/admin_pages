@@ -21,6 +21,7 @@ function App() {
           <Route path="/downloads" component={downloads} exact />
         </Switch>
       </BrowserRouter>
+      <div className="footer_upcloud">Powered by Upcloud Technology Pvt. Ltd.</div>
     </div>
   );
 }
