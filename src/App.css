@@ -19,20 +19,13 @@
     font-size: 14px;
     justify-content: center;
   }
-<<<<<<< HEAD
-}
-=======
-  to {
-    transform: rotate(360deg);
-  }
-}
 
-@media (max-width: 500px) {
   .App {
     background-color: white;
     padding-top: 50px;
-    padding-bottom: 60px;
+    padding-bottom: 10px;
     text-align: left;
   }
 }
->>>>>>> dc06cc53cb44da864e57123c899eca830a380f4d
+
+ 
