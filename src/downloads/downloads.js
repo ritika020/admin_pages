@@ -1,7 +1,8 @@
 import React from "react";
 import Dropzone from "react-dropzone";
 import "./downloads.css";
-import { sendDownloadData } from "../ApiHandling/forDownloads";
+import {sendDownloadData} from '../ApiHandling/forDownloads';
+import menu from "../Images/hamburger.png";
 import img from "../Images/img.svg";
 class branch extends React.Component {
   constructor() {
@@ -57,18 +58,19 @@ class branch extends React.Component {
     return (
       <div className="container">
         <div className="downloads__sec">
+        <button className="downloads__hamburger"><img src={menu} className="downloads__menu align-items-start"></img></button>
           <div className="form__main row ">
             <div className="downloads__col1 col-md-6 col-12">
               <div className="downloads__upload mt-5">
                 <Dropzone onDrop={this.handleDrop}>
                   {({ getRootProps, getInputProps }) => (
-                    <div {...getRootProps({ className: "dropzone" })}>
+                    <div {...getRootProps({ className: "downloads__dropzone" })}>
                       <input {...getInputProps()} />
-                      <p className="Admin_text">
+                      <p className="downloads_dragtext">
                         Drag'n'drop files, or click to select files
                       </p>
-                      <p className="Admin_text1">
-                        <img src={img} className="Admin_arrow"></img>Extra
+                      <p className="downloads_dragtext1">
+                        <img src={img} className="downloads_arrow"></img>Extra
                         Uploads
                       </p>
                     </div>

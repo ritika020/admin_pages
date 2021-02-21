@@ -116,15 +116,17 @@ textarea:not(:placeholder-shown) + span {
   line-height: 21px;
   color: #858585;
 }
-.downloads_text {
-  /* width: 501px;
-    height: 60px; */
-}
+/* .downloads_text {
+    width: 501px;
+    height: 60px; 
+  
+  
+} */
 
 .downloads_submit {
   width: 202px;
   height: 55px;
-  background: #96b6e7;
+  background-color: #96b6e7 !important;
   border-radius: 20px;
 }
 
@@ -133,26 +135,63 @@ textarea:not(:placeholder-shown) + span {
   text-align: center;
   margin-bottom: 40px;
 }
-.downloads__upload {
-  /* margin-bottom: 73px; 
-    margin-top: 82px;*/
-}
+/* .downloads__upload {
+     margin-bottom: 73px; 
+    margin-top: 82px;
+
+  } */
 
 .downloads__sec {
   background-color: white;
   padding-left: 50px;
   padding-right: 50px;
 }
-.downloads_submit:hover {
-  cursor: pointer;
+
+@media (max-width: 500px) {
+  .downloads__col1 {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+  .downloads__col2 {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .downloads__head {
+    display: none;
+  }
+  .downloads__sec {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+  /* .downloads__text1 {
+    font-size: 15px;
+  }
+  .downloads__text2 {
+    font-size: 15px;
+  } */
+  .downloads__menu {
+    width: 28px;
+    height: 28px;
+  }
+  .downloads__hamburger {
+    background-color: white;
+    border: none;
+  }
+  .downloads_dropzone {
+    height: 353px;
+  }
+  .downloads_dragtext {
+    text-align: center;
+    font-size: 21px !important;
+    padding-top: 160px !important;
+  }
+  .downloads_dragtext1 {
+    font-size: 21px;
+    text-align: center;
+  }
 }
 
-.downloads_submit {
-  background-color: #96b6e7;
-  border-radius: 20px;
-}
-
-.dropzone {
+.downloads__dropzone {
   width: 100%;
   height: 400px;
   background: rgba(196, 196, 196, 0.2);
@@ -160,7 +199,7 @@ textarea:not(:placeholder-shown) + span {
   border-radius: 10px;
   padding: 0;
 }
-.Admin_text {
+.downloads_dragtext {
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -170,7 +209,7 @@ textarea:not(:placeholder-shown) + span {
   color: #858585;
   padding-top: 200px;
 }
-.Admin_text1 {
+.downloads_dragtext1 {
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -180,6 +219,11 @@ textarea:not(:placeholder-shown) + span {
   color: #858585;
   padding-top: 40px;
 }
-.Admin_arrow {
+.downloads_arrow {
   padding-right: 31px;
+}
+@media (min-width: 510px) {
+  .downloads__hamburger {
+    display: none;
+  }
 }

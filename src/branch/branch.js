@@ -1,8 +1,9 @@
 import React from "react";
 import Dropzone from "react-dropzone";
-//import DragDrop from "../DragDrop/DragDrop";
+// import DragDrop from "../DragDrop/DragDrop";
 import "./branch.css";
 import {sendBranchNews} from '../ApiHandling/forNews';
+import menu from "../Images/hamburger.png";
 import img from '../Images/img.svg'
 
 class branch extends React.Component {
@@ -77,18 +78,19 @@ class branch extends React.Component {
     return (
         <div className="container">
         <div className="branch__sec">
+          <button className="branch__hamburger"><img src={menu} className="branch__menu align-items-start"></img></button>
         <div className="form__main row align-items-end">
             <div className="branch__col1 col-md-6 col-12">
 
               <div className="branch__upload mt-5">
                 {/* <input className="Branch_upload" type="file"/> */}
                 {/* <DragDrop /> */}
-                <Dropzone onDrop={this.handleDrop}>
+                <Dropzone onDrop={this.handleDrop} >
                   {({ getRootProps, getInputProps }) => (
-                    <div {...getRootProps({ className: "dropzone" })}>
+                    <div {...getRootProps({ className: "branch__dropzone" })}>
                       <input {...getInputProps()} />
-                      <p className="Admin_text">Drag'n'drop files, or click to select files</p>
-                      <p className="Admin_text1"><img src={img} className="Admin_arrow"></img>Extra Uploads</p>
+                      <p className="branch_dragtext">Drag'n'drop files, or click to select files</p>
+                      <p className="branch_dragtext1"><img src={img} className="branch_arrow"></img>Extra Uploads</p>
                      
                       </div>
                   )}

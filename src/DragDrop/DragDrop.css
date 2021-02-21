@@ -33,3 +33,18 @@
 .Admin_arrow {
   padding-right: 31px;
 }
+
+@media (max-width: 500px) {
+  .dropzone {
+    height: 353px;
+  }
+  .Admin_text {
+    text-align: center;
+    font-size: 21px;
+    padding-top: 160px;
+  }
+  .Admin_text1 {
+    font-size: 21px;
+    text-align: center;
+  }
+}

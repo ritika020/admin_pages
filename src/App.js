@@ -19,6 +19,7 @@ function App() {
           <Route path="/branchNews" component={branch} exact />
           <Route path="/centralNews" component={central} exact />
           <Route path="/downloads" component={downloads} exact />
+         
         </Switch>
       </BrowserRouter>
       <div className="footer_upcloud">Powered by Upcloud Technology Pvt. Ltd.</div>

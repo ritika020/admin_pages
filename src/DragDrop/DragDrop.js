@@ -13,7 +13,7 @@ export default function DragDrop() {
   
   return (
     <div>
-      <Dropzone onDrop={handleDrop}>
+      <Dropzone className="dropzone" onDrop={handleDrop}>
         {({ getRootProps, getInputProps }) => (
           <div {...getRootProps({ className: "dropzone" })}>
             <input {...getInputProps()} />

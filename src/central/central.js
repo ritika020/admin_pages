@@ -3,6 +3,7 @@ import "./central.css";
 import Dropzone from "react-dropzone";
 import { sendCentralNews } from "../ApiHandling/forNews";
 import img from "../Images/img.svg";
+import menu from "../Images/hamburger.png";
 
 class central extends React.Component {
   constructor() {
@@ -72,18 +73,19 @@ class central extends React.Component {
     return (
       <div className="container">
         <div className="central__sec">
+        <button className="central__hamburger"><img src={menu} className="branch__menu align-items-start"></img></button>
           <div className="form__main row">
             <div className="central__col1 col-md-6 col-12">
               <div className="central__upload mt-5">
                 <Dropzone onDrop={this.handleDrop}>
                   {({ getRootProps, getInputProps }) => (
-                    <div {...getRootProps({ className: "dropzone" })}>
+                    <div {...getRootProps({ className: "central__dropzone" })}>
                       <input {...getInputProps()} />
-                      <p className="Admin_text">
+                      <p className="central_dragtext">
                         Drag'n'drop files, or click to select files
                       </p>
-                      <p className="Admin_text1">
-                        <img src={img} className="Admin_arrow"></img>Extra
+                      <p className="central_dragtext1">
+                        <img src={img} className="central_arrow"></img>Extra
                         Uploads
                       </p>
                     </div>
