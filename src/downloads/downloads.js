@@ -70,7 +70,7 @@ class branch extends React.Component {
                         Drag'n'drop files, or click to select files
                       </p>
                       <p className="downloads_dragtext1">
-                        <img src={img} className="Admin_arrow"></img>Extra
+                        <img src={img} className="downloads_arrow"></img>Extra
                         Uploads
                       </p>
                     </div>
